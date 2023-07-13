@@ -4,7 +4,6 @@ import Feed from '@/components/Feed'
 const Home = () => {
    return (
       <section className='w-full flex-center flex-col'>
-<<<<<<< HEAD
          <h1 className='head_text text-center'>Discover and Share
             <br className="max-md:hidden" />
             <span className='orange_gradient text-center font-black'>AI-Powered Prompts</span>
@@ -13,10 +12,6 @@ const Home = () => {
             Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts
          </p>
          <Feed />
-=======
-         <h1 className='head_text text-center'>Discover and Share</h1>
-
->>>>>>> b565b85b28673fb7242286db54dc365f40b025c9
       </section>
    )
 }
