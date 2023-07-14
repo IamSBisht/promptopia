@@ -4,19 +4,18 @@ import GoogleProvider from 'next-auth/providers/google';
 import { NextRequest, NextResponse } from "next/server";
 
 const handler = NextAuth({
-    providers:[
+    providers: [
         GoogleProvider({
-            clientId:process.env.GOOGLE_ID,
-            // clientSecret:
+            clientId: process.env.GOOGLE_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         })
-    ]
+    ],
+    async session({ session }) {
+
+    },
+    async signIn({ profile }) {
+
+    }
 })
 
-export async function GET (req) {
-
-    console.log({first: process.env.GOOGLE_ID})
-
-    return NextResponse.json({
-        status: true
-    })
-}
+export { handler as GET, handler as POST };
